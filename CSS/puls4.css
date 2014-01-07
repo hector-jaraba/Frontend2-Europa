@@ -1,0 +1,21 @@
+body{background:#e8e8e8;font-family:Arial;color:#444;font-size:16px}
+header{background:#444;color:#fff;padding:.5em;position:relative;overflow:hidden;box-shadow:0 5px 0 rgba(0,0,0,0.2);z-index:1;}
+header .logo{border-right:1px solid #22bce0;width:60px;}
+header .logo img{width:52px}
+header .titular{margin:0 80px 0 70px;}
+header .titular .filtro{color:#22bce0;text-decoration:none;font-weight:bold;font-style:italic;font-size:14px}
+header .titular .publicar{background:#dd4f24;color:#fff;padding:.2em .5em;text-decoration:none;font-style:italic;margin:-5px 1em 0 0;text-shadow:1px 1px 0 #000;float:right}
+header .titular .titulo{font-size:18px;font-weight:normal;margin:0;padding:0}
+header .usuario{position:absolute;right:10px;top:10px;}
+header .usuario .avatar{margin:0 1em 0 0;position:relative;z-index:69;}
+header .usuario .avatar img{width:50px;border-radius:50%}
+header .usuario .flechita{display:block;background:#dd4f24;color:#fff;position:absolute;width:2em;top:15px;right:0;padding:3px;text-align:right;width:50%;z-index:0}
+nav{background:#22bce0;border-left:15px solid #fff;position:relative;}
+nav:before{content:"";border-bottom:20px solid #22bce0;border-left:7px solid #fff;border-top:20px solid #22bce0;position:absolute;top:0;left:0}
+nav .menu{margin:0;padding:0;overflow-x:auto;height:40px;line-height:40px;white-space:nowrap;}
+nav .menu li{display:inline-block;}
+nav .menu li a{color:#fff;display:block;text-decoration:none;padding:0 .2em;margin:0 .5em}
+.posts{padding:.5em;}
+.posts .post{background:#fff}
+.left{float:left}
+.right{float:right}
