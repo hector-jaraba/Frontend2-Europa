@@ -1,11 +1,54 @@
 gris_oscuro=#444
 azul=#22BCE0
 naranja=#DD4F24
+gris_texto=#7A7A7A
+amarillo=#E0D561
+
+@font-face {
+	font-family: 'hector';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+a
+	color naranja
+
 body
 	background #E8E8E8
 	font-family Arial
 	color gris_oscuro
 	font-size 16px
+
+footer
+	background naranja
+	color rgba(white,0.5)
+	text-align center
+	text-decoration none
+	position relative
+	bottom 0
+	width 100%
+	padding 1.5em 0
+
+	h3
+		font-size 14px
+		font-weight normal
+		margin 0
+
+		strong
+			display block
+
+	.mejor
+		margin 0
+		font-size 14px
+	.mejor:after
+	.mejor:before		
+		content "-"
+		margin 0 0.2em	
 
 header
 	background gris_oscuro
@@ -42,6 +85,12 @@ header
 			text-shadow 1px 1px 0px black
 			float right
 
+			&:before
+				display inline-block
+				content "\e600"
+				font-family "hector"
+				margin 0 0.3em 0 0
+
 
 		.titulo
 			font-size 18px
@@ -54,7 +103,7 @@ header
 		right 10px
 		top 10px
 		.avatar
-			margin 0 1em 0 0
+			margin 0 1.1em 0 0
 			position relative
 			z-index 69
 			img
@@ -69,10 +118,17 @@ header
 			width 2em
 			top 15px
 			right 0px
-			padding 3px
+			padding 2px
 			text-align right
 			width 50%
 			z-index 0
+			text-decoration none
+			&:before
+				display inline-block
+				font-family "hector"
+				content "\e603"
+				text-shadow 1px 1px 0px black
+				
 
 nav
 	background azul	
@@ -111,10 +167,125 @@ nav
 	padding 0.5em
 
 	.post
-		background white					
+		margin-bottom 1em
+		background white
+		color gris_texto
+		box-shadow 2px 2px 10px rgba(black,0.5)
+		border-radius 0 0 0.5em 0.5em
+
+		.acciones
+			border-top 3px solid azul
+			padding 0.5em
+			overflow hidden
+
+			.datos
+				float right
+
+			.comentarios
+				background gris_oscuro
+				color white
+				padding 2px  5px
+				margin 0 1em 0 0
+				text-decoration none
+				border-radius 3px	
+
+			.estrellita
+				text-decoration none
+				&:after
+					font-family "hector"
+					content "\e601"
+					color amarillo
+
+
+			.votos
+				float left
+
+				.down
+				.up
+					text-decoration none	
+
+				.down
+					color red
+					&:before
+						font-family "hector"
+						font-size 1.5em
+						content "\e603"
+						vertical-align bottom
+				.up
+					color green	
+					&:before
+						font-size 1.5em
+						font-family "hector"
+						content "\e602"
+						vertical-align bottom
+
+			
+		.descripcion
+			color gris_texto
+
+			.detalles
+				height 160px
+				margin-left 130px
+
+				.autor
+					margin 0.5em 0 2em 0
+
+				.fecha
+					float right
+					margin 0 1em 0 0
+
+
+				.tag
+					background azul
+					color white
+					text-decoration none	
+					padding 0.2em 0.5em
+					border-radius 0.5em
+
+				.titulo
+					margin 0
+					color gris_oscuro
+					font-size 18px
+					font-style italic
+
+			.imagen
+				float left
+				img
+					width 120px
+					height 160px
+					vertical-align top						
 
 .left
 	float left
 
 .right 
-	float right					
+	float right		
+
+@media screen and (min-width: 768px)
+
+		header
+			.titular
+				.publicar
+					position relative
+					padding-left 3em
+
+					&:before
+						font-size 2.5em
+						left 0px
+						top -5px
+						position absolute
+
+
+		.posts 
+			.post
+				width 48%
+				display inline-block
+				vertical-align top
+
+				&:nth-child(odd)
+					margin 0 2% 0 0
+
+
+				
+
+
